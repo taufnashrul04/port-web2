@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    /* photo-matching red plate — same hue as foto.png background */
+    --plate: #d40e0f;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+
+  ::selection {
+    background: #d40e0f;
+    color: #fafaf7;
+  }
+
+  :focus-visible {
+    outline: 2px solid #d40e0f;
+    outline-offset: 3px;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #d6d5cc transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: #d6d5cc;
+    border-radius: 999px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
+}
+
+@layer components {
+  /* section index label — 01 / 02 ... in mono red */
+  .index-mark {
+    @apply font-mono text-2xs font-medium uppercase tracking-[0.2em] text-red;
+  }
+
+  /* meta / kicker line */
+  .kicker {
+    @apply font-mono text-2xs uppercase tracking-[0.22em] text-faint;
+  }
+
+  /* thin editorial rule */
+  .rule {
+    @apply h-px w-full bg-line;
+  }
+
+  /* large serif lead paragraph */
+  .lead {
+    @apply font-serif text-xl leading-snug text-ink-soft sm:text-2xl;
+  }
+
+  /* red plate behind the portrait, colour-matched to foto.png bg */
+  .plate {
+    background-color: var(--plate);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

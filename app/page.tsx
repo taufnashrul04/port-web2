@@ -1,0 +1,29 @@
+import { Nav } from "@/components/Nav";
+import { Hero } from "@/components/sections/Hero";
+import { Metrics } from "@/components/sections/Metrics";
+import { About } from "@/components/sections/About";
+import { Experience } from "@/components/sections/Experience";
+import { Projects } from "@/components/sections/Projects";
+import { Skills } from "@/components/sections/Skills";
+import { Education } from "@/components/sections/Education";
+import { Contact } from "@/components/sections/Contact";
+import { Footer } from "@/components/Footer";
+
+export default function Home() {
+  return (
+    <div className="relative z-10">
+      <Nav />
+      <main>
+        <Hero />
+        <Metrics />
+        <About />
+        <Education />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
+  );
+}
