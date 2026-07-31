@@ -82,7 +82,7 @@ export const socials: Social[] = [
 export const metrics: Metric[] = [
   { label: "GPA", value: "3.30", hint: "/ 4.00" },
   { label: "TOEFL", value: "653", hint: "English" },
-  { label: "Projects", value: "3+", hint: "shipped" },
+  { label: "Projects", value: "5+", hint: "shipped" },
   { label: "Since", value: "2021", hint: "building" },
 ];
 
@@ -158,6 +158,24 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
+    name: "Inkray Publisher",
+    tagline: "AI content pipeline · production",
+    year: "2026",
+    status: "live",
+    description:
+      "Autonomous content pipeline using DeepSeek V4 Flash generating 800+ articles published on-chain via Sui blockchain (Seal encryption). MCP protocol integration for AI-to-blockchain draft-publish flow. Multi-wallet rotation across 416 wallets with batch orchestration and production error recovery.",
+    stack: ["DeepSeek V4 Flash", "MCP Protocol", "Sui Blockchain", "Node.js", "Python"],
+  },
+  {
+    name: "Hermes AI Agent",
+    tagline: "Autonomous operator · 80+ skills",
+    year: "2025–Present",
+    status: "active",
+    description:
+      "Production AI agent with 80+ skills across crypto operations, automation, and deployment. Multi-model architecture (DeepSeek V4 Pro + Claude) with multi-agent delegation for autonomous task orchestration.",
+    stack: ["DeepSeek V4 Pro", "Claude", "Multi-Agent", "Automation"],
+  },
+  {
     name: "skypots",
     tagline: "Web3 portfolio · personal",
     year: "2026",
@@ -204,8 +222,8 @@ export const skillGroups: SkillGroup[] = [
     id: "ai-data",
     label: "AI & Data",
     items: [
-      { name: "AI Agent Development", level: 74 },
-      { name: "AI Engineering", level: 70 },
+      { name: "AI Agent Development", level: 85 },
+      { name: "AI Engineering", level: 82 },
       { name: "Data Analytics", level: 76 },
     ],
   },
